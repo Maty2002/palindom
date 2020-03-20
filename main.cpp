@@ -34,16 +34,16 @@ void zmiana::zmien(){
     while(!plik1.eof()){ 
         getline(plik1,napis);
         
-        for(int i = 0; i<napis.length(); i++){ //liczy wyst¹pienia znaku
+        for(int i = 0; i<napis.length(); i++){
         	if(napis[i]>64&&napis[i]<91)
-            napis[i] += 32; //wg ASCII aby zmieniæ na wielk¹ literê wystarczy odj¹æ od znaku (char) 32.           
+            napis[i] += 32;           
         }
         
         
         
         stringstream ss(napis);
-        while(ss >> slowo) //dopóki w strumieniu wejœciowym skonstruowanym ze zdania jest jakieœ s³owo (do spacji)
-                polacz += slowo; //dokleja bez spacji do wyniku
+        while(ss >> slowo) 
+                polacz += slowo; 
         
         int end = polacz.length()-1; 
         bool isPalindrome = true; 
