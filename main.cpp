@@ -68,6 +68,7 @@ void zmiana::zmien(){
 
 zmiana::~zmiana(){
     plik1.close();
+    plik2.close();
 }
 
 int main() {
