@@ -22,11 +22,7 @@ zmiana::zmiana(){
 }
 
 void zmiana::zmien(){
-    int licznik; 
     string napis; 
-    string finalScore;
-    string linia;
-    char znak;
     string s(), slowo, polacz("");
 	
 	plik2<<"[";
@@ -53,11 +49,11 @@ void zmiana::zmien(){
             if (polacz[i] != polacz[end--]) 
                     isPalindrome = false;
         
-        if(isPalindrome){
-        	oR = "Tak";
-		}else{
-			oR = "Nie";
-		}
+        if(isPalindrome)
+            oR = "Tak";
+	else
+	    oR = "Nie";
+	
         
         plik2<<"{\"string\":"<<"\""<<polacz<<"\""<<","<<"\"palindrom\":"<<"\""<<oR<<"\"},";
         
@@ -67,8 +63,6 @@ void zmiana::zmien(){
                    
     }
     plik2<<"]";
-    
-    cout<<finalScore;
 }
 
 
